@@ -1,0 +1,141 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="헤더 파일">
+      <UniqueIdentifier>{93995380-89BD-4b04-88EB-625FBE52EBFB}</UniqueIdentifier>
+      <Extensions>h;hh;hpp;hxx;h++;hm;inl;inc;ipp;xsd</Extensions>
+    </Filter>
+    <Filter Include="리소스 파일">
+      <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
+      <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav;mfcribbon-ms</Extensions>
+    </Filter>
+    <Filter Include="MySource">
+      <UniqueIdentifier>{4FC737F1-C7A5-4376-A066-2A32D752A2FF}</UniqueIdentifier>
+      <Extensions>cpp;c;cc;cxx;c++;cppm;ixx;def;odl;idl;hpj;bat;asm;asmx</Extensions>
+    </Filter>
+    <Filter Include="MySource\Chpater9">
+      <UniqueIdentifier>{0ff429ae-37e9-43a1-a480-45320550f288}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="MySource\Chapter19">
+      <UniqueIdentifier>{a2ed5158-ed13-4fdb-9a4c-d29b78e01845}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="MySource\Chapter19\std::fucntion">
+      <UniqueIdentifier>{320a4607-3021-4ece-b558-b4f45632ff51}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="MySource\Chapter19\FunctionPointer">
+      <UniqueIdentifier>{1f46114b-c9bc-48c9-98b0-0847627ff037}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="MySource\Chapter19\ComparisonFunctionObjects">
+      <UniqueIdentifier>{619edece-d753-44ae-b141-981d77f5ba4b}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="MySource\Chapter19\LogicalFunction">
+      <UniqueIdentifier>{61d23637-b083-493c-abd7-4635e6ea51c0}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="MySource\Chapter19\Binders">
+      <UniqueIdentifier>{d229bbbe-ef7b-4e3f-8bf0-471c443d1bba}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="MySource\Chapter19\Handler">
+      <UniqueIdentifier>{4160d47f-5e3c-47aa-87c1-e0f604071686}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="MySource\main">
+      <UniqueIdentifier>{eee79c0d-360a-44ed-b9eb-42ade291849e}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="MySource\SpreadSheet">
+      <UniqueIdentifier>{3817f750-cbaf-4215-a488-b94447446a4a}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="MySource\Chapter19\Lambda">
+      <UniqueIdentifier>{bd8339d1-aaa4-4bae-84e8-85609d637615}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="MySource\Chapter19\Invokers">
+      <UniqueIdentifier>{7256b817-e4c5-428b-b6a8-225f83149079}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="MySource\Chapter19\Exercise">
+      <UniqueIdentifier>{dbcd11b8-c9fe-455f-8f93-735a54ae0ac1}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="MySource\Chapter17">
+      <UniqueIdentifier>{7b7fa9bc-f377-46e5-84ec-511f79940be3}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="main.cpp">
+      <Filter>MySource\main</Filter>
+    </ClCompile>
+    <ClCompile Include="SpreadsheetCell.cpp">
+      <Filter>MySource\SpreadSheet</Filter>
+    </ClCompile>
+    <ClCompile Include="Spreadsheet.cpp">
+      <Filter>MySource\SpreadSheet</Filter>
+    </ClCompile>
+    <ClCompile Include="Hasher.cpp">
+      <Filter>MySource\Chapter19\ComparisonFunctionObjects</Filter>
+    </ClCompile>
+    <ClCompile Include="Binders.cpp">
+      <Filter>MySource</Filter>
+    </ClCompile>
+    <ClCompile Include="Exercise.cpp">
+      <Filter>MySource\Chapter19\Exercise</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="template.h">
+      <Filter>헤더 파일</Filter>
+    </ClInclude>
+    <ClInclude Include="DataHolder.h">
+      <Filter>MySource\Chpater9</Filter>
+    </ClInclude>
+    <ClInclude Include="pch.h">
+      <Filter>헤더 파일</Filter>
+    </ClInclude>
+    <ClInclude Include="framework.h">
+      <Filter>헤더 파일</Filter>
+    </ClInclude>
+    <ClInclude Include="targetver.h">
+      <Filter>헤더 파일</Filter>
+    </ClInclude>
+    <ClInclude Include="standard_function.h">
+      <Filter>MySource\Chapter19\std::fucntion</Filter>
+    </ClInclude>
+    <ClInclude Include="Spreadsheet.h">
+      <Filter>MySource\SpreadSheet</Filter>
+    </ClInclude>
+    <ClInclude Include="SpreadsheetCell.h">
+      <Filter>MySource\SpreadSheet</Filter>
+    </ClInclude>
+    <ClInclude Include="PointersToMethods.h">
+      <Filter>MySource\Chapter19\FunctionPointer</Filter>
+    </ClInclude>
+    <ClInclude Include="FunctionPointer.h">
+      <Filter>MySource\Chapter19\FunctionPointer</Filter>
+    </ClInclude>
+    <ClInclude Include="FunctionObjects.h">
+      <Filter>MySource\Chapter19\FunctionPointer</Filter>
+    </ClInclude>
+    <ClInclude Include="Arthimetic.h">
+      <Filter>헤더 파일</Filter>
+    </ClInclude>
+    <ClInclude Include="ComparisonFunctionObjects.h">
+      <Filter>헤더 파일</Filter>
+    </ClInclude>
+    <ClInclude Include="Hasher.h">
+      <Filter>MySource\Chapter19\ComparisonFunctionObjects</Filter>
+    </ClInclude>
+    <ClInclude Include="LogicalFunc.h">
+      <Filter>MySource\Chapter19\LogicalFunction</Filter>
+    </ClInclude>
+    <ClInclude Include="Binders.h">
+      <Filter>헤더 파일</Filter>
+    </ClInclude>
+    <ClInclude Include="Handler.h">
+      <Filter>MySource\Chapter19\Handler</Filter>
+    </ClInclude>
+    <ClInclude Include="Lambda.h">
+      <Filter>MySource\Chapter19\Lambda</Filter>
+    </ClInclude>
+    <ClInclude Include="Invokers.h">
+      <Filter>MySource\Chapter19\Invokers</Filter>
+    </ClInclude>
+    <ClInclude Include="Iterator_Traits.h">
+      <Filter>MySource\Chapter17</Filter>
+    </ClInclude>
+  </ItemGroup>
+</Project>
