@@ -1,0 +1,7 @@
+﻿  Binders.cpp
+C:\Development\book_source\Exercise\Expert_cpp\expert_cpp\expert_cpp\Binders.cpp(1,10): fatal error C1083: 미리 컴파일된 헤더 파일을 열 수 없습니다. 'x64\Debug\expert_cpp.pch': No such file or directory
+  Exercise.cpp
+C:\Development\book_source\Exercise\Expert_cpp\expert_cpp\expert_cpp\Exercise.cpp(1,10): fatal error C1083: 미리 컴파일된 헤더 파일을 열 수 없습니다. 'x64\Debug\expert_cpp.pch': No such file or directory
+  Hasher.cpp
+C:\Development\book_source\Exercise\Expert_cpp\expert_cpp\expert_cpp\Hasher.cpp(1,10): fatal error C1083: 미리 컴파일된 헤더 파일을 열 수 없습니다. 'x64\Debug\expert_cpp.pch': No such file or directory
+  코드를 생성하고 있습니다...

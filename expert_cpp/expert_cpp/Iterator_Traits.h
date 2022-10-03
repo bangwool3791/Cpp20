@@ -2,34 +2,6 @@
 
 #include "pch.h"
 
-template<typename ITeratorType>
-void iteratorTraitsTest(ITeratorType it)
-{
-	typename iterator_traits<ITeratorType>::value_type temp;
-	temp = *it;
-	cout << temp << endl;
-}
-
-template<typename Iter>
-auto myFind(Iter begin, Iter end, const typename std::iterator_traits<Iter>::value_type& value)
-{
-	for (auto iter{ begin }; iter != end; ++iter)
-	{
-		if (*iter == value)
-			return iter;
-	}
-	return end;
-}
-
-template<typename InputIter, typename OutputIter>
-void myCopy(InputIter begin, InputIter end, OutputIter target)
-{
-	for (auto Iter{ begin }; Iter != end; ++Iter)
-	{
-		*target = *iter;
-	}
-}
-
 int main()
 {
 	vector<int> v{ 1,2,3,4,5,6,7,8,9 };
@@ -41,14 +13,6 @@ int main()
 	myCopy(cbegin(r), cend(r), ostream_iterator<int>{cout, " "});
 	cout << endl;
 	return 0;
-}
-
-template<typename InpuIter>
-auto sum(InpuIter begin, InpuIter end)
-{
-	auto sum{ *begin };
-	for (auto iter{ ++begin }; iter != end; ++iter) { sum += *iter; }
-	return sum;
 }
 
 int main()

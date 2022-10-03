@@ -134,11 +134,13 @@
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClCompile Include="Binders.cpp" />
+    <ClCompile Include="CPerson.cpp" />
     <ClCompile Include="Exercise.cpp" />
     <ClCompile Include="Hasher.cpp" />
     <ClCompile Include="main.cpp">
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">false</ExcludedFromBuild>
     </ClCompile>
+    <ClCompile Include="MoveableClass.cpp" />
     <ClCompile Include="Spreadsheet.cpp">
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</ExcludedFromBuild>
     </ClCompile>
@@ -152,17 +154,21 @@
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</ExcludedFromBuild>
     </ClInclude>
     <ClInclude Include="ComparisonFunctionObjects.h" />
+    <ClInclude Include="CPerson.h" />
     <ClInclude Include="FunctionObjects.h" />
+    <ClInclude Include="global.h" />
     <ClInclude Include="Handler.h" />
     <ClInclude Include="Hasher.h" />
     <ClInclude Include="Invokers.h" />
     <ClInclude Include="Iterator_Traits.h" />
     <ClInclude Include="Lambda.h" />
     <ClInclude Include="LogicalFunc.h" />
+    <ClInclude Include="MoveableClass.h" />
     <ClInclude Include="PointersToMethods.h" />
     <ClInclude Include="DataHolder.h" />
     <ClInclude Include="framework.h" />
     <ClInclude Include="FunctionPointer.h" />
+    <ClInclude Include="reverse_iterator.h" />
     <ClInclude Include="Spreadsheet.h" />
     <ClInclude Include="SpreadsheetCell.h">
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</ExcludedFromBuild>
