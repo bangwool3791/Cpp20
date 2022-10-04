@@ -17,6 +17,8 @@
 #include <iterator>
 #include <ostream>
 #include <set>
+#include <string_view>
+#include <ranges>
 
 #include "global.h"
 

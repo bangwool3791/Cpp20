@@ -57,6 +57,9 @@
     <Filter Include="MySource\Chapter17\Person">
       <UniqueIdentifier>{2e62f12a-24ca-4967-8403-8beda77eb825}</UniqueIdentifier>
     </Filter>
+    <Filter Include="MySource\Chapter17\View">
+      <UniqueIdentifier>{f5d03e32-bed8-46d2-a5f3-0dd556629960}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="main.cpp">
@@ -156,6 +159,9 @@
     </ClInclude>
     <ClInclude Include="CPerson.h">
       <Filter>MySource\Chapter17\Person</Filter>
+    </ClInclude>
+    <ClInclude Include="view.h">
+      <Filter>MySource\Chapter17\View</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>
