@@ -1,25 +1,5 @@
 #pragma once
-#include <vector>
-#include <string>
-#include <list>
-#include <map>
+#include <bits/stdc++.h>
 #include <format>
-#include <iostream>
-#include <unordered_map>
-#include <unordered_set>
-
-#include <stdexcept>
-#include <algorithm> 
-#include <functional>
-
-#include <string>
-#include <format>
-#include <iterator>
-#include <ostream>
-#include <set>
-#include <string_view>
-#include <ranges>
-
-#include "global.h"
-
+#include <optional>
 using namespace std;

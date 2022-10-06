@@ -68,3 +68,73 @@ int main()
 	printRange("Result: ", result);
 	return 0;
 }
+
+void printRange(string_view message, auto& range)
+{
+	cout << message;
+	for (const auto& value : range) { cout << value << " "; }
+	cout << endl;
+}
+int main()
+{
+	vector values{ 1, 2, 3, 4, 5, 6, 7, 8, 9, 10 };
+	printRange("Original sequence: ", values);
+	// Filter out all odd values, leaving only the even values.
+	auto result1{ values
+	| views::filter([](const auto& value) { return value % 2 == 0; }) };
+	printRange("Only even values: ", result1);
+	// Transform all values to their double value.
+	auto result2{ result1
+	| views::transform([](const auto& value) { return value * 2.0; }) };
+	printRange("Values doubled: ", result2);
+	// Drop the first 2 elements.
+	auto result3{ result2 | views::drop(2) };
+	printRange("First two dropped: ", result3);
+	// Reverse the view.
+	auto result4{ result3 | views::reverse };
+	printRange("Sequence reversed: ", result4);
+}
+
+int main()
+{
+	vector values{ 1, 2, 3, 4, 5, 6, 7, 8, 9, 10 };
+	auto result1{ ranges::filter_view{ values, [](const auto& value) {return value % 2 == 0; }}};
+
+	vector values{ 1,2,3,4,5,6,7,8,9,10 };
+	printRange("Original sequence: ", values);
+
+	auto result{ values
+	| views::filter([](const auto& value) { return value % 2 == 0; })
+	| views::transform([](const auto& value) { return value * 2.0; })
+	| views::drop(2)
+	| views::reverse };
+	printRange("Final sequence: ", result);
+	return 0;
+}
+
+int main()
+{
+	auto values{ views::iota(10) };
+
+	auto result1{ values | views::filter([](const auto& value) {return value % 2 == 0; }) };
+	auto result2{ result1 | views::transform([](const auto& value) {return value * 2.0; }) };
+	auto result3{ result2 | views::take(10) };
+	printRange("Result: ", result3);
+
+	auto result{ views::iota(10)
+	| views::filter([](const auto& value) { return value % 2 == 0; })
+	| views::transform([](const auto& value) { return value * 2.0; })
+	| views::take(10) };
+		printRange("Result: ", result);
+	return 0;
+}
+
+int main()
+{
+	for (auto value : ranges::istream_view<int>(cin)
+		| views::take_while([](const auto& v) { return v < 5; })
+		| views::transform([](const auto& v) { return v * 2; })) {
+		cout << std::format("> {}\n", value);
+	}
+	cout << "Terminating..." << endl;
+}

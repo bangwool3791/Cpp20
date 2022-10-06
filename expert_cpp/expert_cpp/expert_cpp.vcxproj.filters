@@ -60,6 +60,9 @@
     <Filter Include="MySource\Chapter17\View">
       <UniqueIdentifier>{f5d03e32-bed8-46d2-a5f3-0dd556629960}</UniqueIdentifier>
     </Filter>
+    <Filter Include="MySource\Chapter12">
+      <UniqueIdentifier>{2487e073-2109-441a-85a7-f6c40aa0b1d5}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="main.cpp">
@@ -85,6 +88,18 @@
     </ClCompile>
     <ClCompile Include="CPerson.cpp">
       <Filter>MySource\Chapter17\Person</Filter>
+    </ClCompile>
+    <ClCompile Include="GamePiece.cpp">
+      <Filter>MySource\Chapter12</Filter>
+    </ClCompile>
+    <ClCompile Include="ChessPiece.cpp">
+      <Filter>MySource\Chapter12</Filter>
+    </ClCompile>
+    <ClCompile Include="GameBoard.cpp">
+      <Filter>MySource</Filter>
+    </ClCompile>
+    <ClCompile Include="Grid.cpp">
+      <Filter>MySource\Chapter12</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
@@ -162,6 +177,16 @@
     </ClInclude>
     <ClInclude Include="view.h">
       <Filter>MySource\Chapter17\View</Filter>
+    </ClInclude>
+    <ClInclude Include="GamePiece.h">
+      <Filter>MySource\Chapter12</Filter>
+    </ClInclude>
+    <ClInclude Include="ChessPiece.h">
+      <Filter>MySource\Chapter12</Filter>
+    </ClInclude>
+    <ClInclude Include="GameBoard.h" />
+    <ClInclude Include="Grid.h">
+      <Filter>MySource\Chapter12</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>
