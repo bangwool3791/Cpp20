@@ -60,8 +60,11 @@
     <Filter Include="MySource\Chapter17\View">
       <UniqueIdentifier>{f5d03e32-bed8-46d2-a5f3-0dd556629960}</UniqueIdentifier>
     </Filter>
-    <Filter Include="MySource\Chapter12">
+    <Filter Include="MySource\Chapter12 %28Template%29">
       <UniqueIdentifier>{2487e073-2109-441a-85a7-f6c40aa0b1d5}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="MySource\Chapter12 %28Template%29\Function">
+      <UniqueIdentifier>{b64fe844-6ad2-423b-81fd-e9cbd3688db1}</UniqueIdentifier>
     </Filter>
   </ItemGroup>
   <ItemGroup>
@@ -90,16 +93,16 @@
       <Filter>MySource\Chapter17\Person</Filter>
     </ClCompile>
     <ClCompile Include="GamePiece.cpp">
-      <Filter>MySource\Chapter12</Filter>
+      <Filter>MySource\Chapter12 %28Template%29</Filter>
     </ClCompile>
     <ClCompile Include="ChessPiece.cpp">
-      <Filter>MySource\Chapter12</Filter>
-    </ClCompile>
-    <ClCompile Include="GameBoard.cpp">
-      <Filter>MySource</Filter>
+      <Filter>MySource\Chapter12 %28Template%29</Filter>
     </ClCompile>
     <ClCompile Include="Grid.cpp">
-      <Filter>MySource\Chapter12</Filter>
+      <Filter>MySource\Chapter12 %28Template%29</Filter>
+    </ClCompile>
+    <ClCompile Include="GameBoard.cpp">
+      <Filter>MySource\SpreadSheet</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
@@ -179,14 +182,16 @@
       <Filter>MySource\Chapter17\View</Filter>
     </ClInclude>
     <ClInclude Include="GamePiece.h">
-      <Filter>MySource\Chapter12</Filter>
+      <Filter>MySource\Chapter12 %28Template%29</Filter>
     </ClInclude>
     <ClInclude Include="ChessPiece.h">
-      <Filter>MySource\Chapter12</Filter>
+      <Filter>MySource\Chapter12 %28Template%29</Filter>
     </ClInclude>
-    <ClInclude Include="GameBoard.h" />
     <ClInclude Include="Grid.h">
-      <Filter>MySource\Chapter12</Filter>
+      <Filter>MySource\Chapter12 %28Template%29</Filter>
+    </ClInclude>
+    <ClInclude Include="GameBoard.h">
+      <Filter>MySource\SpreadSheet</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>

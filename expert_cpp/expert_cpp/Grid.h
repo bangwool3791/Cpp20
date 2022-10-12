@@ -15,6 +15,23 @@ public:
 	size_t getWidth() const { return m_width; }
 	static const size_t DefaultWidth{ 10 };
 	static const size_t DefaultHeight{ 10 };
+
+	template<typename E>
+	Grid(const Grid<E>& src);
+
+	template<typename E>
+	Grid& operator=(const Grid<E>& rhs);
+	void swap(Grid& other)noexcept;
+
+	template<typename T, size_t WIDTH, size_t HEIGHT>
+	template<typename E, size_t WIDTH2, size_t HEIGHT2>
+	Grid<T, WIDTH, HEIGHT>::Grid(const Grid<E, WIDTH2, HEIGHT2>& src);
+
+	template <typename T, size_t WIDTH, size_t HEIGHT>
+	template <typename E, size_t WIDTH2, size_t HEIGHT2>
+	Grid<T, WIDTH, HEIGHT>& Grid<T, WIDTH, HEIGHT>::operator=(
+		const Grid<E, WIDTH2, HEIGHT2>& rhs);
+
 private:
 	void verifyCoordinate(size_t x, size_t y) const;
 	std::optional<T> m_cells[WIDTH][HEIGHT];
@@ -23,6 +40,69 @@ private:
 template<typename T, size_t WIDTH, size_t HEIGHT>
 Grid<T, WIDTH, HEIGHT>::Grid()
 {
+}
+
+template<typename T, size_t WIDTH, size_t HEIGHT>
+template<typename E>
+/*
+* template <typename T, typename E> // Wrong for nested template constructor!
+Grid<T>::Grid(const Grid<E>& src)
+*/
+Grid<T, WIDTH, HEIGHT>::Grid(const Grid<E>& src)
+{
+	for (size_t i{ 0 }; i < WIDTH; i++)
+	{
+		for (size_t j{ 0 }; j < HEIGHT; j++)
+		{
+			m_cells[i][j] = src.at(i, j);
+		}
+	}
+}
+
+template<typename T, size_t WIDTH, size_t HEIGHT>
+template<typename E, size_t WIDTH2, size_t HEIGHT2>
+Grid<T, WIDTH, HEIGHT>::Grid(const Grid<E, WIDTH2, HEIGHT2>& src)
+{
+	for (size_t i{ 0 }; i < WIDTH; i++)
+	{
+		for (size_t j{ 0 }; j < HEIGHT; j++)
+		{
+			if (i < WIDTH2 && j < HEIGHT2)
+			{
+				m_cells[i][j] = src.at(i, j);
+			}
+			else
+			{
+				m_cells[i][j].reset();
+			}
+		}
+	}
+}
+
+template <typename T, size_t WIDTH, size_t HEIGHT>
+template <typename E, size_t WIDTH2, size_t HEIGHT2>
+Grid<T, WIDTH, HEIGHT>& Grid<T, WIDTH, HEIGHT>::operator=(
+	const Grid<E, WIDTH2, HEIGHT2>& rhs)
+{
+	// Copy-and-swap idiom
+	Grid<T, WIDTH, HEIGHT> temp{ rhs }; // Do all the work in a temp instance.
+	swap(temp); // Commit the work with only non-throwing operations.
+	return *this;
+}
+
+template<typename T, size_t WIDTH, size_t HEIGHT>
+template<typename E>
+Grid<T, WIDTH, HEIGHT>& Grid<T, WIDTH, HEIGHT>::operator=(const Grid<E>& rhs)
+{
+	/*
+	* The swap() method can only swap Grids of the same type, but that¡¯s OK because this
+	templatized assignment operator first converts a given Grid<E> to a Grid<T> called temp using the
+	templatized copy constructor. Afterward, it uses the swap() method to swap this temporary Grid<T>
+	with this, which is also of type Grid<T>.
+	*/
+	Grid<T, WIDTH, HEIGHT> temp{ rhs };
+	swap(temp);
+	return *this;
 }
 
 template<typename T, size_t WIDTH, size_t HEIGHT>
@@ -43,6 +123,7 @@ const std::optional<T>& Grid<T, WIDTH, HEIGHT>::at(size_t x, size_t y) const
 	verifyCoordinate(x, y);
 	return m_cells[x][y];
 }
+
 template<typename T, size_t WIDTH, size_t HEIGHT>
 std::optional<T>& Grid<T, WIDTH, HEIGHT>::at(size_t x, size_t y)
 {

@@ -4,6 +4,7 @@
 SpreadsheetCell::SpreadsheetCell(double initialValue)
 	: m_value{ initialValue }
 {
+
 }
 
 SpreadsheetCell::SpreadsheetCell(std::string_view initialValue)

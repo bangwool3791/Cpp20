@@ -25,3 +25,4 @@ private:
 	mutable size_t m_numAccesses{ 0 };
 
 };
+
