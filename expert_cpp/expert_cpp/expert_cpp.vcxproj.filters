@@ -63,9 +63,6 @@
     <Filter Include="MySource\Chapter12 %28Template%29">
       <UniqueIdentifier>{2487e073-2109-441a-85a7-f6c40aa0b1d5}</UniqueIdentifier>
     </Filter>
-    <Filter Include="MySource\Chapter12 %28Template%29\Function">
-      <UniqueIdentifier>{b64fe844-6ad2-423b-81fd-e9cbd3688db1}</UniqueIdentifier>
-    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="main.cpp">
@@ -98,10 +95,10 @@
     <ClCompile Include="ChessPiece.cpp">
       <Filter>MySource\Chapter12 %28Template%29</Filter>
     </ClCompile>
-    <ClCompile Include="Grid.cpp">
-      <Filter>MySource\Chapter12 %28Template%29</Filter>
-    </ClCompile>
     <ClCompile Include="GameBoard.cpp">
+      <Filter>MySource\SpreadSheet</Filter>
+    </ClCompile>
+    <ClCompile Include="SpreadsheetCell.cppm">
       <Filter>MySource\SpreadSheet</Filter>
     </ClCompile>
   </ItemGroup>
@@ -187,7 +184,7 @@
     <ClInclude Include="ChessPiece.h">
       <Filter>MySource\Chapter12 %28Template%29</Filter>
     </ClInclude>
-    <ClInclude Include="Grid.h">
+    <ClInclude Include="Grid.cppm">
       <Filter>MySource\Chapter12 %28Template%29</Filter>
     </ClInclude>
     <ClInclude Include="GameBoard.h">

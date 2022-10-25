@@ -1,7 +1,19 @@
-﻿  Binders.cpp
-C:\Development\book_source\Exercise\Expert_cpp\expert_cpp\expert_cpp\Binders.cpp(1,10): fatal error C1083: 미리 컴파일된 헤더 파일을 열 수 없습니다. 'x64\Debug\expert_cpp.pch': No such file or directory
-  Exercise.cpp
-C:\Development\book_source\Exercise\Expert_cpp\expert_cpp\expert_cpp\Exercise.cpp(1,10): fatal error C1083: 미리 컴파일된 헤더 파일을 열 수 없습니다. 'x64\Debug\expert_cpp.pch': No such file or directory
-  Hasher.cpp
-C:\Development\book_source\Exercise\Expert_cpp\expert_cpp\expert_cpp\Hasher.cpp(1,10): fatal error C1083: 미리 컴파일된 헤더 파일을 열 수 없습니다. 'x64\Debug\expert_cpp.pch': No such file or directory
-  코드를 생성하고 있습니다...
+﻿  모듈 종속성의 소스를 검사하는 중...
+  main.cpp
+C:\Development\book_source\Exercise\Expert_cpp\expert_cpp\expert_cpp\main.cpp(1,12): error C2230: 'grid' 모듈을 찾을 수 없습니다.
+C:\Development\book_source\Exercise\Expert_cpp\expert_cpp\expert_cpp\main.cpp(9,21): error C7568: 가정한 함수 템플릿 'Grid' 뒤에 인수 목록이 없습니다.
+C:\Development\book_source\Exercise\Expert_cpp\expert_cpp\expert_cpp\main.cpp(16,2): error C7568: 가정한 함수 템플릿 'Grid' 뒤에 인수 목록이 없습니다.
+C:\Development\book_source\Exercise\Expert_cpp\expert_cpp\expert_cpp\main.cpp(18,2): error C7568: 가정한 함수 템플릿 'Grid' 뒤에 인수 목록이 없습니다.
+C:\Development\book_source\Exercise\Expert_cpp\expert_cpp\expert_cpp\main.cpp(23,2): error C7568: 가정한 함수 템플릿 'Grid' 뒤에 인수 목록이 없습니다.
+C:\Development\book_source\Exercise\Expert_cpp\expert_cpp\expert_cpp\main.cpp(24,2): error C7568: 가정한 함수 템플릿 'Grid' 뒤에 인수 목록이 없습니다.
+C:\Development\book_source\Exercise\Expert_cpp\expert_cpp\expert_cpp\main.cpp(32,2): error C7568: 가정한 함수 템플릿 'Grid' 뒤에 인수 목록이 없습니다.
+C:\Development\book_source\Exercise\Expert_cpp\expert_cpp\expert_cpp\main.cpp(36,2): error C7568: 가정한 함수 템플릿 'Grid' 뒤에 인수 목록이 없습니다.
+C:\Development\book_source\Exercise\Expert_cpp\expert_cpp\expert_cpp\main.cpp(39,2): error C7568: 가정한 함수 템플릿 'Grid' 뒤에 인수 목록이 없습니다.
+C:\Development\book_source\Exercise\Expert_cpp\expert_cpp\expert_cpp\main.cpp(43,38): error C7568: 가정한 함수 템플릿 'Grid' 뒤에 인수 목록이 없습니다.
+C:\Development\book_source\Exercise\Expert_cpp\expert_cpp\expert_cpp\main.cpp(43,26): error C2672: 'std::make_unique': 일치하는 오버로드된 함수가 없습니다.
+C:\Development\book_source\Exercise\Expert_cpp\expert_cpp\expert_cpp\main.cpp(43,53): error C2770: 'std::unique_ptr<_Ty,std::default_delete<_Ty>> std::make_unique(_Types &&...)'에 대한 명시적 템플릿 인수가 잘못되었습니다.
+C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.29.30133\include\memory(3381): message : 'std::make_unique' 선언을 참조하십시오.
+C:\Development\book_source\Exercise\Expert_cpp\expert_cpp\expert_cpp\main.cpp(43,24): error C2119: 'myGridOnFreeStore': 'auto'에 대한 형식은 비어 있는 이니셜라이저에서 추론할 수 없습니다.
+C:\Development\book_source\Exercise\Expert_cpp\expert_cpp\expert_cpp\main.cpp(49,20): error C3856: 'Grid': 기호가 클래스 템플릿이(가) 아닙니다.
+C:\Development\book_source\Exercise\Expert_cpp\expert_cpp\expert_cpp\main.cpp(49,27): error C2143: 구문 오류: ';'이(가) '>' 앞에 없습니다.
+C:\Development\book_source\Exercise\Expert_cpp\expert_cpp\expert_cpp\main.cpp(49,27): error C2059: 구문 오류: '>'

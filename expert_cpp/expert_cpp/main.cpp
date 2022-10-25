@@ -1,29 +1,49 @@
-﻿// expert_cpp.cpp : 이 파일에는 'main' 함수가 포함됩니다. 거기서 프로그램 실행이 시작되고 종료됩니다.
-//
-#include "pch.h"
-//#include "Spreadsheet.h"
-//#include "PointersToMethods.h"
-#include "FunctionPointer.h"
-//#include "standard_function.h"
-//#include "FunctionObjects.h"
-//#include "Handler.h"
+﻿import grid;
+import spreadsheet_cell;
+#include <vector>
+#include <memory>
+import <string>;
 
 using namespace std;
 
+void processIntGrid(Grid<int>& /*grid*/)
+{
+	// Body omitted for brevity
+}
+
 int main()
 {
-	//// Bind second argument to a fixed value.
-	//string myString{ "abc" };
-	//auto f1{ bind(func, placeholders::_1, myString) };
-	//f1(16);
+	Grid<int> myIntGrid; // Declares a grid that stores ints,
+						 // using default arguments for the constructor.
+	Grid<double> myDoubleGrid{ 11, 11 }; // Declares an 11x11 Grid of doubles.
 
-	//// Rearrange arguments
-	//auto f2{ bind(func, placeholders::_2, placeholders::_1) };
-	//f2("Test", 32);
+	myIntGrid.at(0, 0) = 10;
+	int x{ myIntGrid.at(0, 0).value_or(0) };
 
-	[&](auto func, auto string)
-	{
-		bind(func, placeholders::_1, string);
-	};
-	return 0;
+	Grid<int> grid2{ myIntGrid };  // Copy constructor
+	Grid<int> anotherIntGrid;
+	anotherIntGrid = grid2;      // Assignment operator
+
+	//Grid test;   // WILL NOT COMPILE
+	//Grid<> test; // WILL NOT COMPILE
+
+	processIntGrid(myIntGrid);
+
+	Grid<SpreadsheetCell> mySpreadsheet;
+	SpreadsheetCell myCell{ 1.234 };
+	mySpreadsheet.at(3, 4) = myCell;
+
+	Grid<const char*> myStringGrid;
+	myStringGrid.at(2, 2) = "hello";
+
+	Grid<vector<int>> gridOfVectors;
+	vector<int> myVector{ 1, 2, 3, 4 };
+	gridOfVectors.at(5, 6) = myVector;
+
+	auto myGridOnFreeStore{ make_unique<Grid<int>>(2, 2) }; // 2x2 Grid on the free store.
+	myGridOnFreeStore->at(0, 0) = 10;
+	int x2{ myGridOnFreeStore->at(0, 0).value_or(0) };
 }
+
+// Explicit class template instantiation.
+template class Grid<string>;

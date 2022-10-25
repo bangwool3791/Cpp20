@@ -41,11 +41,3 @@ int main()
 	return 0;
 }
 
-int main()
-{
-	vector data{ 33, 11, 22 };
-	sort(begin(data), end(data));
-	ranges::sort(data);
-	return 0;
-}
-

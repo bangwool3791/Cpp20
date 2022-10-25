@@ -2,17 +2,17 @@ module spreadsheet_cell;
 
 #include <charconv>
 //import <charconv>;
-#include <stdexcept>;
+import <stdexcept>;
 
 using namespace std;
 
 SpreadsheetCell::SpreadsheetCell(double initialValue)
-	: m_value{ initialValue }
+	: m_value { initialValue }
 {
 }
 
 SpreadsheetCell::SpreadsheetCell(string_view initialValue)
-	: m_value{ stringToDouble(initialValue) }
+	: m_value { stringToDouble(initialValue) }
 {
 }
 
@@ -108,7 +108,7 @@ SpreadsheetCell& SpreadsheetCell::operator*=(const SpreadsheetCell& rhs)
 SpreadsheetCell& SpreadsheetCell::operator/=(const SpreadsheetCell& rhs)
 {
 	if (rhs.getValue() == 0) {
-		throw invalid_argument{ "Divide by zero." };
+		throw invalid_argument { "Divide by zero." };
 	}
 	set(getValue() / rhs.getValue());
 	return *this;
